@@ -1,0 +1,13 @@
+{
+    "strength_reduction_factor": 1.0,
+    "cohesion_kpa": 20.0,
+    "friction_angle_deg": 28.0,
+    "gravity_ramp": {
+        "increments": 20,
+        "time_step": 0.05,
+        "initial_fraction": 0.05,
+        "final_fraction": 1.0,
+        "target_gravity_m_s2": 9.81
+    },
+    "purpose": "Check whether the one-step static transition is robust to incremental self-weight application."
+}

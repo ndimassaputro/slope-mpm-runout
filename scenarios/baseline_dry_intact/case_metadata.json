@@ -1,0 +1,25 @@
+{
+    "case": "baseline_dry_intact",
+    "stage": "preflight",
+    "material": {
+        "description": "idealised cohesive-frictional dry baseline",
+        "density_kg_m3": 2000.0,
+        "young_modulus_pa": 30000000.0,
+        "poisson_ratio": 0.3,
+        "cohesion_pa": 20000.0,
+        "friction_angle_deg": 28.0,
+        "dilatancy_angle_deg": 0.0,
+        "material_points_per_element": 3
+    },
+    "boundary_conditions": {
+        "bottom": "ux=uy=0",
+        "left": "ux=0, uy free",
+        "right": "free",
+        "top": "free"
+    },
+    "preflight": {
+        "end_time_s": 0.002,
+        "time_step_s": 0.001,
+        "purpose": "Input, material-point generation, boundary-condition and solver compatibility check only."
+    }
+}

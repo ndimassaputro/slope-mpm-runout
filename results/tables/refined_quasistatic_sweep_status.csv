@@ -1,0 +1,7 @@
+factor,case,status,converged_steps,last_gravity_fraction,full_gravity_reached,analysis_end,element_inverted,exception,return_code,runtime_s
+1.5,F_1p50,FULL_EQ,20,1.0,True,True,False,False,0,3.829094886779785
+1.52,F_1p52,FULL_EQ,20,1.0,True,True,False,False,0,3.858106851577759
+1.54,F_1p54,FULL_EQ,20,1.0,True,True,False,False,0,3.841944932937622
+1.56,F_1p56,FULL_EQ,20,1.0,True,True,False,False,0,4.780853033065796
+1.58,F_1p58,CHECK,19,1.0,False,True,False,False,0,4.938758134841919
+1.6,F_1p60,CHECK,18,1.0,False,True,False,False,0,5.728731155395508

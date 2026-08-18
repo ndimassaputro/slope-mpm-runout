@@ -1,0 +1,7 @@
+{
+    "strength_state": "preconditioned F=1.58",
+    "initial_checkpoint": "../wet_preconditioned_F1p58_checkpoint",
+    "dynamic_duration_s": 0.05,
+    "time_step_s": 0.001,
+    "purpose": "Verify dynamic stability of the preconditioned near-critical wet state before introducing prescribed toe erosion."
+}

@@ -1,0 +1,7 @@
+{
+    "case": "F_1p00",
+    "purpose": "Smoke test for incremental self-weight using Kratos quasi-static MPM.",
+    "solver_type": "quasi_static",
+    "gravity_ramp": "0.05g to 1.00g in 20 increments",
+    "acceptance": "All 20 increments must complete without element inversion and the final response must remain physically comparable to the verified one-step static baseline."
+}

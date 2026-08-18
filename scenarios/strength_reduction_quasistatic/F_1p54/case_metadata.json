@@ -1,0 +1,18 @@
+{
+    "strength_reduction_factor": 1.54,
+    "baseline_strength": {
+        "cohesion_kpa": 20.0,
+        "friction_angle_deg": 28.0
+    },
+    "reduced_strength": {
+        "cohesion_kpa": 12.987012987012985,
+        "friction_angle_deg": 19.048045916078944
+    },
+    "reduction_rule": {
+        "cohesion": "c_F = c_0 / F",
+        "friction": "tan(phi_F) = tan(phi_0) / F"
+    },
+    "solver": "Kratos quasi_static MPM",
+    "gravity_path": "0.05g to 1.00g in 20 increments",
+    "interpretation": "Critical transition is bracketed between the highest strength-reduction factor completing full self-weight equilibrium and the lowest factor that cannot complete it."
+}

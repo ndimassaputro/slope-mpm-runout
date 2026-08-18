@@ -1,0 +1,8 @@
+factor,case,status,return_code,analysis_end,converged,error_detected,residual_checks,runtime_s
+1.0,F_1p00,COMPLETE,0,True,True,False,4,0.3655848503112793
+1.1,F_1p10,COMPLETE,0,True,True,False,4,0.1864781379699707
+1.2,F_1p20,COMPLETE,0,True,True,False,4,0.19516205787658691
+1.3,F_1p30,COMPLETE,0,True,True,False,5,0.19644999504089355
+1.4,F_1p40,COMPLETE,0,True,True,False,8,0.23028302192687988
+1.5,F_1p50,COMPLETE,0,True,True,False,22,0.31695103645324707
+1.6,F_1p60,CHECK,-6,False,False,False,4,0.22187495231628418

@@ -1,0 +1,150 @@
+{
+    "problem_data": {
+        "problem_name": "F1p58_progressive_toe_erosion",
+        "parallel_type": "OpenMP",
+        "echo_level": 0,
+        "start_time": 1.0,
+        "end_time": 1.601
+    },
+    "solver_settings": {
+        "solver_type": "Dynamic",
+        "model_part_name": "MPM_Material",
+        "domain_size": 2,
+        "echo_level": 1,
+        "analysis_type": "non_linear",
+        "model_import_settings": {
+            "input_type": "rest",
+            "input_filename": "MPM_Material",
+            "input_output_path": "restart_input",
+            "load_restart_files_from_folder": true,
+            "restart_load_file_label": "1.0",
+            "echo_level": 1,
+            "serializer_trace": "no_trace"
+        },
+        "material_import_settings": {
+            "materials_filename": "ParticleMaterials.json"
+        },
+        "time_stepping": {
+            "time_step": 0.001
+        },
+        "convergence_criterion": "residual_criterion",
+        "displacement_relative_tolerance": 0.0001,
+        "displacement_absolute_tolerance": 1e-09,
+        "residual_relative_tolerance": 0.0001,
+        "residual_absolute_tolerance": 1e-09,
+        "max_iteration": 30,
+        "compute_reactions": true,
+        "problem_domain_sub_model_part_list": [
+            "SlopeBody",
+            "BackgroundGrid"
+        ],
+        "processes_sub_model_part_list": [
+            "BoundaryBottom",
+            "BoundaryLeft"
+        ],
+        "grid_model_import_settings": {
+            "input_type": "mdpa",
+            "input_filename": "slope_Grid"
+        },
+        "pressure_dofs": false,
+        "linear_solver_settings": {
+            "solver_type": "LinearSolversApplication.sparse_lu",
+            "scaling": false
+        },
+        "scheme_type": "newmark",
+        "damp_factor_m": -0.3,
+        "newmark_beta": 0.25,
+        "time_integration_method": "implicit"
+    },
+    "processes": {
+        "constraints_process_list": [
+            {
+                "python_module": "assign_vector_variable_process",
+                "kratos_module": "KratosMultiphysics",
+                "Parameters": {
+                    "model_part_name": "Background_Grid.BoundaryBottom",
+                    "variable_name": "DISPLACEMENT",
+                    "constrained": [
+                        true,
+                        true,
+                        true
+                    ],
+                    "value": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "interval": [
+                        0.0,
+                        "End"
+                    ]
+                }
+            },
+            {
+                "python_module": "assign_vector_variable_process",
+                "kratos_module": "KratosMultiphysics",
+                "Parameters": {
+                    "model_part_name": "Background_Grid.BoundaryLeft",
+                    "variable_name": "DISPLACEMENT",
+                    "constrained": [
+                        true,
+                        false,
+                        true
+                    ],
+                    "value": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "interval": [
+                        0.0,
+                        "End"
+                    ]
+                }
+            }
+        ],
+        "loads_process_list": [],
+        "list_other_processes": [],
+        "gravity": []
+    },
+    "output_processes": {
+        "body_output_process": [
+            {
+                "python_module": "mpm_vtk_output_process",
+                "kratos_module": "KratosMultiphysics.MPMApplication",
+                "process_name": "MPMVTKOutputProcess",
+                "Parameters": {
+                    "model_part_name": "MPM_Material",
+                    "output_path": "progressive_Body",
+                    "output_control_type": "time",
+                    "output_interval": 0.02,
+                    "gauss_point_variables_in_elements": [
+                        "MP_DISPLACEMENT",
+                        "MP_VELOCITY",
+                        "MP_CAUCHY_STRESS_VECTOR",
+                        "MP_ALMANSI_STRAIN_VECTOR",
+                        "MP_EQUIVALENT_PLASTIC_STRAIN",
+                        "MP_ACCELERATION"
+                    ]
+                }
+            }
+        ],
+        "grid_output_process": [
+            {
+                "python_module": "vtk_output_process",
+                "kratos_module": "KratosMultiphysics",
+                "process_name": "VTKOutputProcess",
+                "Parameters": {
+                    "model_part_name": "Background_Grid",
+                    "output_path": "progressive_Grid",
+                    "output_control_type": "time",
+                    "output_interval": 0.02,
+                    "nodal_solution_step_data_variables": [
+                        "DISPLACEMENT",
+                        "REACTION"
+                    ]
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "properties": [
+        {
+            "model_part_name": "Initial_MPM_Material.SlopeBody",
+            "properties_id": 1,
+            "Material": {
+                "constitutive_law": {
+                    "name": "HenckyMCPlasticPlaneStrain2DLaw"
+                },
+                "Variables": {
+                    "THICKNESS": 1.0,
+                    "MATERIAL_POINTS_PER_ELEMENT": 3,
+                    "DENSITY": 2000.0,
+                    "YOUNG_MODULUS": 30000000.0,
+                    "POISSON_RATIO": 0.3,
+                    "COHESION": 12820.51282051282,
+                    "INTERNAL_FRICTION_ANGLE": 0.32849071585164563,
+                    "INTERNAL_DILATANCY_ANGLE": 0.0
+                },
+                "Tables": {}
+            }
+        }
+    ]
+}

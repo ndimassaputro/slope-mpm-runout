@@ -1,0 +1,10 @@
+{
+    "strength_state": "preconditioned F=1.58",
+    "erosion_ratio_Et": 0.3,
+    "slope_height_m": 10.0,
+    "toe_recession_m": 3.0,
+    "erosion_type": "instantaneous prescribed triangular toe-wedge removal",
+    "interpretation": "Idealized geometric toe-recession state; not wave-resolved erosion.",
+    "dynamic_duration_s": 0.2,
+    "time_step_s": 0.001
+}

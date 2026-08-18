@@ -1,0 +1,6 @@
+{
+    "strength_reduction_factor": 1.59,
+    "cohesion_kpa": 12.578616352201257,
+    "friction_angle_deg": 18.490370488491028,
+    "purpose": "Near-transition preconditioned strength state eligibility test. Not interpreted as a physical factor of safety."
+}

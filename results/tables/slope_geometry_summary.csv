@@ -1,0 +1,15 @@
+metric,value
+slope_height_m,10.0
+slope_angle_deg,30.0
+slope_run_m,17.320508075688778
+toe_x_m,23.320508075688778
+target_spacing_m,0.5
+body_nodes,656.0
+body_triangles,1190.0
+background_nodes,1925.0
+background_triangles,3648.0
+exact_area_m2,146.6025403784439
+mesh_area_m2,146.6025403780488
+area_error_percent,-2.695168879621774e-10
+minimum_triangle_angle_deg,20.13953157532303
+p05_minimum_triangle_angle_deg,44.999999999999986

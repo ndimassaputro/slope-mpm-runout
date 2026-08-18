@@ -1,0 +1,14 @@
+metric,value
+material_points_initial,30000.0
+material_points_final,30000.0
+initial_width_m,0.1993333306745626
+initial_height_m,0.09933333663502708
+initial_front_x_m,0.19966666400432587
+final_front_x_m,0.5098927021026611
+raw_front_advance_m,0.31022603809833527
+robust_front_advance_p99_9_m,0.2848251310884955
+normalized_raw_runout_L0,1.556317937639939
+final_max_height_m,0.0996021181344986
+maximum_particle_displacement_m,0.3150263093602016
+peak_particle_speed_m_s,1.488305191030732
+time_of_peak_speed_s,0.12005

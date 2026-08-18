@@ -1,0 +1,120 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.venv/
+venv/
+env/
+*.egg-info/
+results/raw/
+
+# Kratos benchmark raw outputs
+benchmark/official_granular_flow_2D/granular_flow_2D_Body/
+benchmark/official_granular_flow_2D/granular_flow_2D_Grid/
+benchmark/official_granular_flow_2D/*.post.bin
+benchmark/official_granular_flow_2D/*.post.lst
+benchmark/official_granular_flow_2D/*.post.res
+benchmark/official_granular_flow_2D/benchmark_run.log
+
+# Slope MPM raw solver outputs
+scenarios/**/preflight_Body/
+scenarios/**/preflight_Grid/
+scenarios/**/output_Body/
+scenarios/**/output_Grid/
+scenarios/**/*.post.bin
+scenarios/**/*.post.res
+scenarios/**/*.post.msh
+scenarios/**/*.post.lst
+scenarios/**/*.log
+
+# Static equilibrium raw outputs
+scenarios/**/equilibrium/equilibrium_Body/
+scenarios/**/equilibrium/equilibrium_Grid/
+scenarios/**/equilibrium/*.log
+
+# Strength-reduction raw outputs
+scenarios/strength_reduction/**/sr_Body/
+scenarios/strength_reduction/**/sr_Grid/
+scenarios/strength_reduction/**/run.log
+
+# Ramped-gravity verification outputs
+scenarios/strength_reduction_ramped/**/ramp_Body/
+scenarios/strength_reduction_ramped/**/ramp_Grid/
+scenarios/strength_reduction_ramped/**/run.log
+
+# Quasi-static ramp smoke outputs
+scenarios/quasistatic_ramp_smoke/**/qs_Body/
+scenarios/quasistatic_ramp_smoke/**/qs_Grid/
+scenarios/quasistatic_ramp_smoke/**/*.log
+
+# Refined quasi-static strength reduction outputs
+scenarios/strength_reduction_quasistatic/**/qs_Body/
+scenarios/strength_reduction_quasistatic/**/qs_Grid/
+scenarios/strength_reduction_quasistatic/**/run.log
+
+# Dynamic pipeline raw checkpoint/output files
+scenarios/dynamic_pipeline/**/restart/
+scenarios/dynamic_pipeline/**/checkpoint_Body/
+scenarios/dynamic_pipeline/**/checkpoint_Grid/
+scenarios/dynamic_pipeline/**/*.log
+
+# Dynamic dry smoke raw outputs
+scenarios/dynamic_pipeline/dry_dynamic_smoke/restart_input/
+scenarios/dynamic_pipeline/dry_dynamic_smoke/dynamic_Body/
+scenarios/dynamic_pipeline/dry_dynamic_smoke/dynamic_Grid/
+scenarios/dynamic_pipeline/dry_dynamic_smoke/*.log
+
+# Wet dynamic pilot raw outputs
+scenarios/dynamic_pipeline/wet_F1p62_pilot/restart_input/
+scenarios/dynamic_pipeline/wet_F1p62_pilot/wet_Body/
+scenarios/dynamic_pipeline/wet_F1p62_pilot/wet_Grid/
+scenarios/dynamic_pipeline/wet_F1p62_pilot/*.log
+
+# Toe erosion F1.58 Et=0.10 raw outputs
+scenarios/toe_erosion/F1p58_Et010/restart_input/
+scenarios/toe_erosion/F1p58_Et010/erosion_Body/
+scenarios/toe_erosion/F1p58_Et010/erosion_Grid/
+scenarios/toe_erosion/F1p58_Et010/*.log
+
+# Toe-erosion raw solver outputs — all cases
+scenarios/toe_erosion/**/restart_input/
+scenarios/toe_erosion/**/erosion_Body/
+scenarios/toe_erosion/**/erosion_Grid/
+scenarios/toe_erosion/**/progressive_Body/
+scenarios/toe_erosion/**/progressive_Grid/
+scenarios/toe_erosion/**/extended_Body/
+scenarios/toe_erosion/**/extended_Grid/
+scenarios/toe_erosion/**/*.log
+
+# ------------------------------------------------------------------
+# Universal raw Kratos/MPM outputs
+# Keep reproducible inputs and processed results; exclude heavy solver state.
+# ------------------------------------------------------------------
+scenarios/**/*.vtk
+scenarios/**/*.rest
+scenarios/**/restart_input/
+scenarios/**/dynamic_Body/
+scenarios/**/dynamic_Grid/
+scenarios/**/wet_Body/
+scenarios/**/wet_Grid/
+
+# ------------------------------------------------------------------
+# Development-only / superseded experiments
+# These were useful diagnostics but are not part of the final scientific study.
+# ------------------------------------------------------------------
+
+# Post-restart F=1.62 property-edit pilot:
+# constitutive Mohr-Coulomb strength was cached in restart state,
+# so this is an implementation diagnostic, not a physical weakened scenario.
+scenarios/dynamic_pipeline/wet_F1p62_pilot/
+results/tables/wet_F1p62_time_history.csv
+src/build_wet_dynamic_pilot.py
+src/analyze_wet_dynamic_pilot.py
+
+# Superseded ramped-gravity strength-reduction attempt:
+# baseline itself inverted under that formulation, so exclude from final workflow.
+scenarios/strength_reduction_ramped/
+results/tables/ramped_gravity_verification.csv
+src/build_ramped_gravity_verification.py
+src/run_ramped_gravity_verification.py

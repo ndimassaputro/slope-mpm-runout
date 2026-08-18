@@ -1,0 +1,18 @@
+{
+    "strength_reduction_factor": 1.0,
+    "baseline": {
+        "cohesion_pa": 20000.0,
+        "friction_angle_deg": 28.0
+    },
+    "reduced": {
+        "cohesion_pa": 20000.0,
+        "cohesion_kpa": 20.0,
+        "friction_angle_rad": 0.4886921905584123,
+        "friction_angle_deg": 28.0
+    },
+    "reduction_rule": {
+        "cohesion": "c_F = c_0 / F",
+        "friction": "tan(phi_F) = tan(phi_0) / F"
+    },
+    "interpretation": "Static strength-reduction screening case. Convergence loss alone is not interpreted as physical slope failure."
+}

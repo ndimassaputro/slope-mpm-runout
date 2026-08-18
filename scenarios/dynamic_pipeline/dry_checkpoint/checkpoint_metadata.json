@@ -1,0 +1,7 @@
+{
+    "state": "dry intact equilibrium",
+    "strength_reduction_factor": 1.0,
+    "gravity_loading": "0.05g to 1.00g in 20 quasi-static increments",
+    "checkpoint_time": 1.0,
+    "purpose": "Equilibrated dry/intact MPM state used as the common initial condition for subsequent dynamic weakening and runout simulations."
+}

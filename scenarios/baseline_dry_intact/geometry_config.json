@@ -1,0 +1,25 @@
+{
+  "case": "baseline_dry_intact",
+  "geometry": {
+    "slope_height_m": 10.0,
+    "crest_x_m": 6.0,
+    "slope_angle_deg": 30.0,
+    "slope_run_m": 17.320508075688778,
+    "toe_x_m": 23.320508075688778,
+    "domain_xmax_m": 38.0,
+    "domain_ymax_m": 12.0
+  },
+  "mesh": {
+    "target_spacing_m": 0.5,
+    "body_nodes": 656,
+    "body_triangles": 1190,
+    "background_nodes": 1925,
+    "background_triangles": 3648
+  },
+  "boundary_concept": {
+    "bottom": "ux = uy = 0",
+    "left": "ux = 0; uy free",
+    "right": "free",
+    "top": "free"
+  }
+}

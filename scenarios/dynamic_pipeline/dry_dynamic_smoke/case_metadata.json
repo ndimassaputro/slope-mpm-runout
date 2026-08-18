@@ -1,0 +1,18 @@
+{
+    "initial_state": "F=1.00 equilibrated dry/intact restart",
+    "restart_time": 1.0,
+    "dynamic_end_time": 1.05,
+    "dynamic_duration_s": 0.05,
+    "dynamic_dt_s": 0.001,
+    "solver": "implicit dynamic MPM / Newmark",
+    "kinematic_reset": {
+        "MP_VELOCITY": 0.0,
+        "MP_ACCELERATION": 0.0,
+        "MP_VOLUME_ACCELERATION": [
+            0.0,
+            -9.81,
+            0.0
+        ]
+    },
+    "purpose": "Verify that the equilibrated dry/intact stress state remains mechanically stable after switching from quasi-static initialization to dynamic MPM."
+}

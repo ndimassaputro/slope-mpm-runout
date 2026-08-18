@@ -1,0 +1,9 @@
+{
+    "state": "preconditioned wet / near-critical state",
+    "strength_reduction_factor": 1.58,
+    "cohesion_kpa": 12.658227848101266,
+    "friction_angle_deg": 18.599370835493087,
+    "interpretation": "Hydrologically informed preconditioned strength state. Strength is prescribed before self-weight equilibration; this is not transient infiltration or an explicit saturation history.",
+    "max_newton_iterations": 100,
+    "checkpoint_time": 1.0
+}

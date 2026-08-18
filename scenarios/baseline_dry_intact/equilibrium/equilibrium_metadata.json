@@ -1,0 +1,7 @@
+{
+    "stage": "static_self_weight_equilibrium",
+    "purpose": "Establish a gravity-loaded dry/intact reference configuration prior to strength weakening and toe erosion.",
+    "solver": "Kratos MPM static nonlinear",
+    "gravity_m_s2": 9.81,
+    "interpretation_rule": "This case is accepted as the dry/intact reference only if the nonlinear solution converges and the displacement/stress response is physically plausible."
+}
