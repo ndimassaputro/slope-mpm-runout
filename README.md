@@ -60,8 +60,8 @@ The study follows a verification-first workflow:
 
 The slope geometry uses:
 
-- height \(H = 10\) m,
-- slope inclination \(30^\circ\),
+- height $H = 10$ m,
+- slope inclination $30^\circ$,
 - 3,570 initial material points,
 - Mohr-Coulomb plasticity,
 - plane-strain constitutive response.
@@ -83,7 +83,7 @@ The dry/intact slope reaches a stable self-weight equilibrium.
 | P95 displacement | 24.459 mm |
 | Maximum displacement | 25.703 mm |
 | Maximum equivalent plastic strain | 0 |
-| Plastic MPs above \(10^{-4}\) | 0% |
+| Plastic MPs above $10^{-4}$ | 0% |
 
 The baseline therefore provides a mechanically stable reference state for the weakening and erosion experiments.
 
@@ -93,36 +93,36 @@ The baseline therefore provides a mechanically stable reference state for the we
 
 Strength screening uses
 
-\[
+$$
 c_F = \frac{c_0}{F}
-\]
+$$
 
 and
 
-\[
+$$
 \tan \phi_F = \frac{\tan \phi_0}{F}.
-\]
+$$
 
 Here:
 
-- \(c\) is cohesion: the bonding contribution to shear strength,
-- \(\phi\) is friction angle: the frictional contribution to shear resistance,
-- \(F\) is the numerical strength-reduction factor.
+- $c$ is cohesion: the bonding contribution to shear strength,
+- $\phi$ is friction angle: the frictional contribution to shear resistance,
+- $F$ is the numerical strength-reduction factor.
 
 **The strength-reduction factor is not interpreted as a physical factor of safety.**
 
 Under the common incremental gravity-ramp setup and a 100-iteration Newton budget:
 
-- \(F=1.58\) reaches full self-weight equilibrium.
-- \(F=1.59\) does not converge at the final full-gravity increment.
+- $F=1.58$ reaches full self-weight equilibrium.
+- $F=1.59$ does not converge at the final full-gravity increment.
 
 The model-specific equilibrium transition is therefore bracketed by
 
-\[
+$$
 1.58 < F_{\mathrm{transition}} \leq 1.59.
-\]
+$$
 
-The equilibrated \(F=1.58\) case is selected as the near-transition preconditioned weakened state.
+The equilibrated $F=1.58$ case is selected as the near-transition preconditioned weakened state.
 
 A short dynamic continuation shows that this state does not spontaneously mobilize after the quasi-static pseudo-velocity is removed.
 
@@ -132,32 +132,32 @@ A short dynamic continuation shows that this state does not spontaneously mobili
 
 Toe recession is parameterized by
 
-\[
+$$
 E_t = \frac{e}{H},
-\]
+$$
 
 where:
 
-- \(e\) = horizontal toe recession,
-- \(H = 10\) m = slope height.
+- $e$ = horizontal toe recession,
+- $H = 10$ m = slope height.
 
 For example,
 
-\[
+$$
 E_t=0.10
-\]
+$$
 
 corresponds to a 1.0 m toe recession.
 
 Material points inside the prescribed toe wedge are removed using the Kratos MPM material-point erase mechanism.
 
-Each **single-stage** experiment starts independently from the same equilibrated \(F=1.58\) state.
+Each **single-stage** experiment starts independently from the same equilibrated $F=1.58$ state.
 
 ---
 
 ## 4. Increasing toe recession increases mobilization
 
-| \(E_t\) | Toe recession | Final P95 displacement | Peak P95 speed | New plastic MPs |
+| $E_t$ | Toe recession | Final P95 displacement | Peak P95 speed | New plastic MPs |
 |---:|---:|---:|---:|---:|
 | 0.10 | 1.0 m | 0.044 mm | 0.00301 m/s | 11.13% |
 | 0.15 | 1.5 m | 0.127 mm | 0.00639 m/s | 19.20% |
@@ -183,7 +183,7 @@ However, all tested single-stage cases show an early velocity peak followed by d
 
 A second experiment reaches the same final geometry progressively:
 
-\[
+$$
 E_t =
 0.10
 \rightarrow
@@ -194,11 +194,11 @@ E_t =
 0.25
 \rightarrow
 0.30.
-\]
+$$
 
 The intervals between erosion stages are numerical relaxation intervals and are **not interpreted as a physical coastal-erosion rate**.
 
-At the same final \(E_t=0.30\):
+At the same final $E_t=0.30$:
 
 | Metric | Single-stage | Progressive |
 |---|---:|---:|
@@ -230,8 +230,8 @@ The progressive case reaches approximately **33.8% newly plastic material points
 
 In the extended relaxation calculation:
 
-- peak post-\(E_t=0.30\) P95 speed: \(9.83\times10^{-3}\) m/s,
-- final P95 speed: \(4.31\times10^{-3}\) m/s,
+- peak post-$E_t=0.30$ P95 speed: $9.83\times10^{-3}$ m/s,
+- final P95 speed: $4.31\times10^{-3}$ m/s,
 - final/peak speed ratio: 0.438,
 - late-time speed ratio: 0.897.
 
@@ -241,23 +241,23 @@ The model therefore develops substantial plastic mobilization without transition
 
 ## Main finding
 
-> **Hydrologically informed strength weakening places the model slope close to an equilibrium transition, while increasing prescribed toe recession progressively increases displacement, dynamic response, and plastic mobilization. Within the tested range, however, neither single-stage nor progressive toe recession up to \(E_t=0.30\) produces self-sustaining landslide runout.**
+> **Hydrologically informed strength weakening places the model slope close to an equilibrium transition, while increasing prescribed toe recession progressively increases displacement, dynamic response, and plastic mobilization. Within the tested range, however, neither single-stage nor progressive toe recession up to $E_t=0.30$ produces self-sustaining landslide runout.**
 
 The simulations distinguish between
 
-\[
+$$
 \text{stable state}
 \rightarrow
 \text{mobilization}
 \rightarrow
 \text{plastic yielding}
-\]
+$$
 
 and the stronger condition
 
-\[
+$$
 \text{self-sustaining large-deformation failure}.
-\]
+$$
 
 ---
 
