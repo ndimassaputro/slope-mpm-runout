@@ -2,6 +2,14 @@
 
 ## Large-Deformation Modelling of Hydrologically Informed Slope Weakening and Progressive Toe Erosion
 
+[![Python](https://img.shields.io/badge/Python-3.14-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![Kratos Multiphysics](https://img.shields.io/badge/Kratos-MPMApplication-555555)](https://github.com/KratosMultiphysics/Kratos)
+[![Method](https://img.shields.io/badge/Method-Material%20Point%20Method-6B7280)](#why-mpm)
+[![Domain](https://img.shields.io/badge/Domain-Geotechnical%20Engineering-8B5E3C)](#)
+[![Release](https://img.shields.io/badge/release-v1.0.0-2F855A)](https://github.com/ndimassaputro/slope-mpm-runout/releases/tag/v1.0.0)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
+
 **Research question:**  
 *How do hydrologically informed soil weakening and progressive toe erosion interact to control slope mobilization and post-disturbance response?*
 
@@ -314,3 +322,15 @@ Instead, it isolates a smaller mechanistic question:
 > **How does a preconditioned weakened slope respond as toe support is progressively removed?**
 
 The workflow provides a reproducible foundation for future coupled hydro-mechanical and large-deformation modelling.
+
+---
+
+## License and third-party software
+
+Original SlopeMPM code and documentation are released under the
+[MIT License](LICENSE).
+
+Third-party benchmark material and Kratos Multiphysics remain subject to
+their respective upstream terms. See
+[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+
